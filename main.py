@@ -38,7 +38,7 @@ def main():
                 while (link != 'single' and link != 'complete' and link != 'average'
                     and link !='centroid'):
                         print("Enter only one of the given options")
-                        link = str(input("Linkage type: (single, complete, average, centroid): "))
+                        link = str(input("Linkage type: (single, complete, average, centroid): ")).lower()
 
                 Agglomerative_Clustering(matrix,cluster_num,link)
 
