@@ -11,7 +11,7 @@ def main():
 
     while(user_input != 0):
         try:
-            user_input = int(input("1: Scatter plot\n2: Hierarchical Clustering\n3: Agglomerative Clustering"
+            user_input = int(input("1: Scatter plot\n2: Hierarchical Clustering dendrogram\n3: Agglomerative Clustering"
                                 "\n4: Show your data\n0: To exit\n"))
             if(user_input == 1): scatter_plotter(data())
 
@@ -117,7 +117,7 @@ def data():
 
 def show_data():
     if(len(matrix) != 0):
-        print(np.array(matrix))
+        for i in matrix: print(i)
     else:
         print("No data provided")
     time.sleep(2)
