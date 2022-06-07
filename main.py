@@ -99,19 +99,21 @@ def data():
     data.matrix = []
     if len(matrix) == 0:
         try:
-            row_col = int(input("Enter the number of points: "))
-            for i in range(row_col):
-                x_axis = float(input("Enter x value: "))
-                y_axis = float(input("Enter y value: "))
-                matrix.append([x_axis, y_axis])
-            if(row_col < 0):
-                raise ValueError
-            return np.array(matrix)
-            
+            while(True):
+                row_col = int(input("Enter the number of points: "))
+                for i in range(row_col):
+                    x_axis = float(input("Enter x value: "))
+                    y_axis = float(input("Enter y value: "))
+                    matrix.append([x_axis, y_axis])
+                if row_col <= 0:
+                    print("Enter positive numbers of points.")
+                else:
+                    return np.array(matrix)
+
         except TypeError and ValueError:
-            print("Enter numbers:")
+            print("Enter positive numbers (integer for number of points, float otherwise.")
     else:
-        empty = input('To set a new data and points type only yes: ')
+        empty = input("To set a new data and points type only 'yes': ")
         if empty == 'yes':
             matrix.clear()
             data()
