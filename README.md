@@ -11,10 +11,15 @@ NOTE: The only used distance in the above code is euclidean: i.e
 $$d(p,q)=\sqrt (\sum_{i=1}^n (q_i-p_i)^2)$$
 
 * Direction of clustering for the dendrogram:
+* 
 ** **Top**: the root at the top and leaves at the bottom.
+
 ** **Bottom**: the root at the bottom and leaves at the top.
+
 ** **Right**: the root at the right and leaves at the leaft.
+
 ** **Left**: the root at the left and the leaves at the right.
+
 
 * Link between the data type:
 
