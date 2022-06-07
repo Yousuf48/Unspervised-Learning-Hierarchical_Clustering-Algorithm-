@@ -105,6 +105,8 @@ def data():
                 y_axis = float(input("Enter y value: "))
                 matrix.append([x_axis, y_axis])
             return np.array(matrix)
+            if(row_col < 0):
+                raise ValueError
         except TypeError and ValueError:
             print("Enter numbers:")
     else:
