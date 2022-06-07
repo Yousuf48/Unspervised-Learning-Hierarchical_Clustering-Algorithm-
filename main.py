@@ -18,22 +18,22 @@ def main():
             elif(user_input == 2):
 
                 matrix = data()
-                orientation = str(input("Direction of clustering: (top,bottom,left,right): "))
-                link = str(input("Linkage type: (single, complete, average, centroid): "))
+                orientation = str(input("Direction of clustering: (top,bottom,left,right): ")).lower()
+                link = str(input("Linkage type: (single, complete, average, centroid): ")).lower()
 
                 while (orientation != 'top' and orientation != 'bottom' and orientation != 'left'
                     and orientation != 'right') or (link != 'single' and link != 'complete' and link != 'average'
                      and link !='centroid'):
 
                         print("Enter only one of the given options")
-                        orientation = str(input("Direction of clustering: (top,bottom,left,right): "))
-                        link = str(input("Linkage type: (single, complete, average, centroid): "))
+                        orientation = str(input("Direction of clustering: (top,bottom,left,right): ")).lower()
+                        link = str(input("Linkage type: (single, complete, average, centroid): ")).lower()
 
                 Hierarchical_Clustering(matrix,orientation,link)
             elif(user_input == 3):
                 matrix = data()
                 cluster_num = int(input("The number of clusters k: "))
-                link = str(input("Linkage type: (single, complete, average, centroid): "))
+                link = str(input("Linkage type: (single, complete, average, centroid): ")).lower()
 
                 while (link != 'single' and link != 'complete' and link != 'average'
                     and link !='centroid'):
@@ -113,7 +113,7 @@ def data():
         except TypeError and ValueError:
             print("Enter positive numbers (integer for number of points, float otherwise.")
     else:
-        empty = input("To set a new data and points type only 'yes': ")
+        empty = input("To set a new data and points type only 'yes': ").lower()
         if empty == 'yes':
             matrix.clear()
             data()
