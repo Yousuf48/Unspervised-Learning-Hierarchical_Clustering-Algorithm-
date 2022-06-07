@@ -48,3 +48,10 @@ $$d(s,t) = ||C_s - C_t ||$$
 
 **4**: Shows your dataset.
 
+
+## Resources:
+
+https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/
+
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html
+
