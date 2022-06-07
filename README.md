@@ -12,32 +12,37 @@ $$d(p,q)=\sqrt (\sum_{i=1}^n (q_i-p_i)^2)$$
 
 * Direction of clustering for the dendrogram:
 
-** **Top**: the root at the top and leaves at the bottom.
+    ** **Top**: the root at the top and leaves at the bottom.
 
-** **Bottom**: the root at the bottom and leaves at the top.
+    ** **Bottom**: the root at the bottom and leaves at the top.
 
-** **Right**: the root at the right and leaves at the leaft.
+    ** **Right**: the root at the right and leaves at the leaft.
 
-** **Left**: the root at the left and the leaves at the right.
+    ** **Left**: the root at the left and the leaves at the right.
 
 
 * Link between the data type:
 
-P.S "dist" is euclidean distance.
+   P.S "dist" is euclidean distance.
 
-** **Single**: 
-$$d(u,v) = min(dist(u[i],v[i]))$$
+   - **Single**: 
+    
+    $$d(u,v) = min(dist(u[i],v[i]))$$
 
-** **Complete**:
-$$d(u,v) = max(dist(u[i],v[i]))$$
+   - **Complete**:
+    
+    $$d(u,v) = max(dist(u[i],v[i]))$$
 
 
-** **Average**:
-$$d(u,v) = \sum_{i,j} (dist(u[i],v[i]) / (|u| * |v|))$$
+   - **Average**:
+    
+    $$d(u,v) = \sum_{i,j} (dist(u[i],v[i]) / (|u| * |v|))$$
 
 	Note: |u| and |v| is the cardinality(size) of set u and v.
-** **Centroid**
-$$d(s,t) = ||C_s - C_t ||$$
+	
+   - **Centroid**
+    
+    $$d(s,t) = ||C_s - C_t ||$$
 
 	Note: C is the centroid of a cluster
   
