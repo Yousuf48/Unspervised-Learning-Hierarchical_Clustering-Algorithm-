@@ -18,27 +18,27 @@ def main():
             elif(user_input == 2):
 
                 matrix = data()
-                orientation = str(input("Direction of clustering: (top,bottom,left,right): ")).lower()
-                link = str(input("Linkage type: (single, complete, average, centroid): ")).lower()
+                orientation = str(input("Direction of clustering: (top,bottom,left,right): ")).lower().strip()
+                link = str(input("Linkage type: (single, complete, average, centroid): ")).lower().strip()
 
                 while (orientation != 'top' and orientation != 'bottom' and orientation != 'left'
                     and orientation != 'right') or (link != 'single' and link != 'complete' and link != 'average'
                      and link !='centroid'):
 
                         print("Enter only one of the given options")
-                        orientation = str(input("Direction of clustering: (top,bottom,left,right): ")).lower()
-                        link = str(input("Linkage type: (single, complete, average, centroid): ")).lower()
+                        orientation = str(input("Direction of clustering: (top,bottom,left,right): ")).lower().strip()
+                        link = str(input("Linkage type: (single, complete, average, centroid): ")).lower().strip()
 
                 Hierarchical_Clustering(matrix,orientation,link)
             elif(user_input == 3):
                 matrix = data()
                 cluster_num = int(input("The number of clusters k: "))
-                link = str(input("Linkage type: (single, complete, average, centroid): ")).lower()
+                link = str(input("Linkage type: (single, complete, average, centroid): ")).lower().strip()
 
                 while (link != 'single' and link != 'complete' and link != 'average'
                     and link !='centroid'):
                         print("Enter only one of the given options")
-                        link = str(input("Linkage type: (single, complete, average, centroid): ")).lower()
+                        link = str(input("Linkage type: (single, complete, average, centroid): ")).lower().strip()
 
                 Agglomerative_Clustering(matrix,cluster_num,link)
 
@@ -47,7 +47,7 @@ def main():
             else:
                 if(user_input != 0):raise ValueError()
         except ValueError or TypeError:
-            print("Choose a number between 0-3")
+            print("Choose a number between 0-4")
 
 
 def scatter_plotter(matrix):
@@ -117,7 +117,7 @@ def data():
         return np.array(matrix)
 
     else:
-        empty = input("To set a new data and points type only 'yes': ").lower()
+        empty = input("To set a new data and points type only 'yes': ").lower().strip()
         if empty == 'yes':
             matrix.clear()
             data()
