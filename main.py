@@ -104,13 +104,17 @@ def data():
                 row_col = int(input("Enter the number of points: "))
                 if row_col <= 0:
                     print("Enter positive numbers of points.")
+                    continue
+
+                for i in range(row_col):
+                    x_axis = float(input("Enter x value: "))
+                    y_axis = float(input("Enter y value: "))
+                    matrix.append([x_axis, y_axis])
+                else:
+                    return np.array(matrix)
+     
             except TypeError and ValueError:
                 print("Enter positive numbers (integer for number of points, float otherwise).")
-        for i in range(row_col):
-            x_axis = float(input("Enter x value: "))
-            y_axis = float(input("Enter y value: "))
-            matrix.append([x_axis, y_axis])
-        return np.array(matrix)
 
     else:
         empty = input("To set a new data and points type only 'yes': ").lower()
