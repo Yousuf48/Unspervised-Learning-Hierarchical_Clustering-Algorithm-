@@ -97,24 +97,24 @@ def Agglomerative_Clustering(matrix, n,link):
 
 def data():
     data.matrix = []
+    boolean = True
     if len(matrix) == 0:
-        row_col = 0
-        while(row_col == 0):
+
+        while (boolean):
             try:
                 row_col = int(input("Enter the number of points: "))
-                if row_col <= 0:
-                    print("Enter positive numbers of points.")
-                    continue
+                if row_col <= 0: print("Enter positive number")
 
                 for i in range(row_col):
                     x_axis = float(input("Enter x value: "))
                     y_axis = float(input("Enter y value: "))
                     matrix.append([x_axis, y_axis])
-                else:
-                    return np.array(matrix)
-     
+                    if (i == row_col-1): boolean = False
+
             except TypeError and ValueError:
                 print("Enter positive numbers (integer for number of points, float otherwise).")
+
+        return np.array(matrix)
 
     else:
         empty = input("To set a new data and points type only 'yes': ").lower()
