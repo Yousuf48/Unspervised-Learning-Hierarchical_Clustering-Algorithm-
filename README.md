@@ -47,7 +47,7 @@ $$d(p,q)=\sqrt (\sum_{i=1}^n (q_i-p_i)^2)$$
 	Note: C is the centroid of a cluster
   
   
-## Number options (0-3):
+## Number options (0-4):
 **0**: Exits
 
 **1**: Shows a  scatter plot graph.
